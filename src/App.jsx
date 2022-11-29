@@ -10,28 +10,29 @@ import { PRODUCTS } from './utilities/constants/products';
 
 
 function App() {
-  const pages = useRoutes([
-  { path: '/', element: <Home />},
-  { path: '/login', element: <Login />},
-  { path: '*', element: <NotFound /> }
-  ])
-
-  return pages
+  // const pages = useRoutes([
+  // { path: '/', element: <Home />},
+  // { path: '/login', element: <Login />},
+  // { path: '*', element: <NotFound /> }
+  // ])
   
-  // return (
+
+  // return pages
+  
+  return (
     
-  //   <>
-  //     {/* <Router>
-  //       <Routes>
-  //         <Route path='/' element={<Home/>}/>
-  //         <Route path='/login' element={<Login/>} />
-  //         <Route path="*" element={<NotFound />} />
-  //       </Routes>
-  //       <Footer/>
-  //     </Router> */}
+    <>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/login' element={<Login/>} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer/>
+      </Router>
       
-  //   </>
-  // );
+    </>
+  );
 }
 
 export default App;

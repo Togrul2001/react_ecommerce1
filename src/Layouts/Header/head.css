@@ -10,7 +10,7 @@
 .header_filter {
     background-color: #2b2a29;
     padding: 0.5em;
-    clip-path: polygon(0 0, 100% 0, 96% 182%, 3% 100%)
+    clip-path: polygon(0 0, 100% 0, 96% 190%, 3% 100%)
 }
 
 .header_filter > .row {

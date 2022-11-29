@@ -29,7 +29,7 @@ function Home(){
                 </div>
                 <div className="container triple_header_element">
                     
-                    <Search/>
+                    <Search products={products}/>
                 </div>
                 <br />
                 

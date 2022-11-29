@@ -7,7 +7,6 @@ import { getData } from "../data";
 
 
 function Product({ favorites, product, handleAddFavList }) {
-    console.log("favorites", favorites)
     return(
         <div key={product.id} className="best_seller_product">
             <div className="add_favorite_list">

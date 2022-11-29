@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@500&display=swap');
+
+.footer_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_section li{
+    list-style-type: none;
+}
+
+.footer_section a {
+    text-decoration: none;
+}
+
+.footer_first_part {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-row: auto;
+    background-color: #000;
+    justify-content: center;
+    padding: 40px 0;
+    row-gap: 1.5em;
+    color: #fff;
+}
+
+
+.footer_first_part li {
+    padding: 0;
+    line-height: 2.4em;
+}
+
+.first_part_column ul {
+    padding: 0;
+}
+
+.first_part_column p {
+    font-size: x-large;
+    font-family: 'Anek Devanagari', sans-serif;
+}
+
+.first_part_column a{
+    color: #fff;
+}
+
+.first_part_column li a:hover {
+    color: #f26522;
+    transition: .1 ease-in;
+}
+
+.mobile_apps {
+    width: 180px;
+}
+
+.sosial_media_apps {
+    display: flex;
+}
+
+.sosial_media_apps div{
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+    border-radius: 50%;
+    color: #000;
+    margin-right: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.sosial_media_apps div:hover{
+    background-color: #f26522;
+}
+
+.first_part_column .ios, .android {
+    border: 1px solid #E6E6E6;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 180px;
+}
+
+.first_part_column .app_name {
+    font-size: 18px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+
+}
+
+.first_part_column .app_text {
+    font-size: 12px;
+}
+
+.footer_pay_methods {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+}
+
+
+
+.footer_second_part {
+    background-color: #2d2d2d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.footer_second_part ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_second_part span,
+.footer_second_part a{
+    font-size: 13px;
+    color: #fff;
+    transition: .1s ease-in;
+}
+
+.footer_second_part a:hover {
+    color: #f26522;
+}
+
+.footer_second_part a {
+    margin: 7px;
+}
+
