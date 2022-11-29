@@ -1,0 +1,21 @@
+
+
+.text-center {
+    font-weight: bold;
+    width: 100%;
+    font-size: 40px;
+    color: #30302e;
+    padding: 20px;
+}
+
+.third_section {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.third_section > h1 {
+    text-align: center;
+    padding-bottom: 30px;
+
+}
+

@@ -1,0 +1,11 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+.carousel-dark {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.slick-slide img {
+    object-fit: cover;
+    padding: 0 10px;
+}
