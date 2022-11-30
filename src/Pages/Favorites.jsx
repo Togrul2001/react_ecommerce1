@@ -10,17 +10,20 @@ import {MdFavorite} from 'react-icons/md'
 import {BsFillBookmarkFill} from 'react-icons/bs'
 
 function Favorites(){
-    const [products, setProducts] = React.useState(PRODUCTS)
+    // const [products, setProducts] = React.useState(PRODUCTS)
     const [favoriteProducts, setFavoriteProducts] = React.useState(getData())
+    const [filterProducts, setFilterProducts] = React.useState(favoriteProducts)
     favoriteProducts.reverse()
     let filteredlist = []
     const handleRemoveFavList = (id) => {
-        filteredlist = favoriteProducts.filter(favproductid => favproductid !== id)
+        const foundedProduct = favoriteProducts.find(fav=> fav.id === id)
+        filteredlist = favoriteProducts.filter(fav=> fav.id !== foundedProduct.id)
         setFavoriteProducts(filteredlist) 
         setData(filteredlist)
     }
-    const handleSearchProduct = (product) => {
-        setProducts(product)
+    const handleSearchProduct = (search) => {
+        const filteredproducts = favoriteProducts.filter(data => data.name.toLowerCase().includes(search.toLowerCase()))
+        setFilterProducts(filteredproducts)
     }
     return (
         <>
@@ -37,12 +40,10 @@ function Favorites(){
                             <Link to='/collections'>Collections</Link>
                         </div>
                     </div>
-                    <Search products={products} handleSearchProduct={handleSearchProduct}/>
+                    <Search products={favoriteProducts} handleSearchProduct={handleSearchProduct}/>
                 </div>
                 <div className="favorite_list">
-                    {favoriteProducts.map(favproductid => {
-                        return products.map(product => product.id === favproductid ? <Product key={product.id} product={product} handleRemoveFavList={handleRemoveFavList}/> : '')
-                    })}
+                    {filterProducts.map(product => <Product key={product.id} product={product} handleRemoveFavList={handleRemoveFavList}/>)}
                 </div>
             </div>
 

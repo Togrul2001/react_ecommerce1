@@ -17,7 +17,7 @@ function Collections({ handleRemoveFavList}){
                 <div className="favorite_header">
                     <div className="pages">
                         <div className="favorite_button">
-                            <Link exact={true} to='/favorites'>Favorite</Link>
+                            <Link to='/favorites'>Favorite</Link>
                         </div>
                         <div className="collection_button"style={{borderBottom:'4px solid #f26522'}}>
                             <Link to='/collections'>Collection</Link>

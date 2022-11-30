@@ -6,14 +6,17 @@ import Product from "./Product";
 
 function BestSellers({ products }) {
     const [favorites, setFavorites] = React.useState([])
-    const handleAddFavList = (id) => {
+    const handleAddFavList = (product) => {
+        console.log("product", product)
         let filteredData = []
-        if (favorites?.includes(id)) {
-            filteredData = favorites.filter(favorite => favorite !== id)
+        const foundedproduct = favorites?.find(fav => fav?.id === product.id)
+        console.log("founded", foundedproduct)
+        if (foundedproduct) {
+            filteredData = favorites.filter(favorite => favorite.id !== foundedproduct.id)
             setFavorites(filteredData)
         }
         else{
-            filteredData = [...favorites, id]
+            filteredData = [...favorites, product]
             setFavorites(filteredData)
         }
         setData(filteredData)

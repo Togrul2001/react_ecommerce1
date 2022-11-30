@@ -10,7 +10,7 @@ function Product({handleRemoveFavList, favorites, product, handleAddFavList }) {
     return(
         <div key={product.id} className="best_seller_product">
             <div className="add_favorite_list">
-                {favorites ? favorites.includes(product.id) ? <MdFavorite onClick={() => handleAddFavList(product.id)} className="active_favorite"/> : <GrFavorite onClick={() => handleAddFavList(product.id)} className="deactive_favorite"/> : <MdFavorite onClick={() => handleRemoveFavList(product.id)} className="active_favorite"/>}
+                {favorites ? favorites.find(fav=>fav.id === product.id) ? <MdFavorite onClick={() => handleAddFavList(product)} className="active_favorite"/> : <GrFavorite onClick={() => handleAddFavList(product)} className="deactive_favorite"/> : <MdFavorite onClick={() => handleRemoveFavList(product.id)} className="active_favorite"/>}
             </div>
 
             <a href="/">
