@@ -1,4 +1,10 @@
-
+.home_main_section {
+    background-image: url("../Assets/Images/banner-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
 
 .text-center {
     font-weight: bold;
@@ -8,12 +14,12 @@
     padding: 20px;
 }
 
-.third_section {
+.home_third_section {
     margin-top: 5em;
     margin-bottom: 5em;
 }
 
-.third_section > h1 {
+.home_third_section > h1 {
     text-align: center;
     padding-bottom: 30px;
 

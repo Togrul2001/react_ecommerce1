@@ -1,5 +1,6 @@
 import React from 'react';
 import { HiMenuAlt1 } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 import './head.css'
 import OtherComponents from './OtherComponents';
 import Sidebar from './Sidebar';
@@ -20,11 +21,11 @@ function Head(){
                 <div className="header_filter">
                     <div className="row">
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="">Basket</a></li>
-                            <li><a href="">Favorites</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Contact</a></li>
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/basket'>Basket</Link></li>
+                            <li><Link to='/favorites'>Favorites</Link></li>
+                            <li><Link to='/about'>About</Link></li>
+                            <li><Link to='/contact'>Contact</Link></li>
                             <OtherComponents/>
                         </ul>
                         

@@ -62,13 +62,6 @@
     font-family: aquirefont;
 }
 
-.main_section {
-    background-image: url("../../Assets/Images/banner-bg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
 
 .triple_header_element {
     display: flex;

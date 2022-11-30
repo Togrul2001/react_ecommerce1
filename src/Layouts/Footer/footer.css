@@ -72,9 +72,11 @@
 
 .sosial_media_apps div:hover{
     background-color: #f26522;
+    color: #fff;
 }
 
-.first_part_column .ios, .android {
+.first_part_column .ios, 
+.first_part_column .android {
     border: 1px solid #E6E6E6;
     border-radius: 8px;
     padding: 10px;
@@ -83,6 +85,12 @@
     height: 50px;
     width: 180px;
 }
+
+.first_part_column .ios:hover, 
+.first_part_column .android:hover{
+    transform: scale(1.1);
+}
+
 
 .first_part_column .app_name {
     font-size: 18px;

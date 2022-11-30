@@ -20,7 +20,7 @@ function Home(){
 
     return(
         <>
-            <div className="main_section">
+            <div className="home_main_section">
                 <Head/>
                 <div className="container">
                     <div className="logo">
@@ -35,11 +35,11 @@ function Home(){
                 
             </div>
             
-            <div className="container second_section">
+            <div className="container home_second_section">
                 <h2 className='text-center'>Man & Woman Fashion</h2>
                 <IndividualIntervalsExample products={products}/>
             </div>
-            <div className="container third_section">
+            <div className="container home_third_section">
                 <h1>Best Sellers</h1>
                 <BestSellers products={products}/>
             </div>

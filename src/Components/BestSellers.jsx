@@ -27,8 +27,7 @@ function BestSellers({ products }) {
     return (
         <>
             <div className="container best_seller_products">
-                    {products.map(product => <Product key={product.id} favorites={favorites} product={product} handleAddFavList={handleAddFavList}/>)}
-        
+                    {products.map(product => product.sale>=30 ? <Product key={product.id} favorites={favorites} product={product} handleAddFavList={handleAddFavList}/> : '')}
             </div>
         </>
     );

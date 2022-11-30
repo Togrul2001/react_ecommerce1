@@ -6,11 +6,11 @@ import {MdFavorite} from 'react-icons/md'
 import { getData } from "../data";
 
 
-function Product({ favorites, product, handleAddFavList }) {
+function Product({handleRemoveFavList, favorites, product, handleAddFavList }) {
     return(
         <div key={product.id} className="best_seller_product">
             <div className="add_favorite_list">
-                {favorites?.includes(product.id) ? <MdFavorite onClick={() => handleAddFavList(product.id)} className="active_favorite"/> : <GrFavorite onClick={() => handleAddFavList(product.id)} className="deactive_favorite"/>}
+                {favorites ? favorites.includes(product.id) ? <MdFavorite onClick={() => handleAddFavList(product.id)} className="active_favorite"/> : <GrFavorite onClick={() => handleAddFavList(product.id)} className="deactive_favorite"/> : <MdFavorite onClick={() => handleRemoveFavList(product.id)} className="active_favorite"/>}
             </div>
 
             <a href="/">
