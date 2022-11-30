@@ -3,15 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'react-slick'
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Router>
-    <App />
-    </Router> */}
-    <App/>
+
+      <App />
+
   </React.StrictMode>
 );
 

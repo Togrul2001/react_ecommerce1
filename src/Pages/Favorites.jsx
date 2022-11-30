@@ -13,12 +13,13 @@ function Favorites(){
     // const [products, setProducts] = React.useState(PRODUCTS)
     const [favoriteProducts, setFavoriteProducts] = React.useState(getData())
     const [filterProducts, setFilterProducts] = React.useState(favoriteProducts)
-    favoriteProducts.reverse()
+    favoriteProducts?.reverse()
     let filteredlist = []
     const handleRemoveFavList = (id) => {
         const foundedProduct = favoriteProducts.find(fav=> fav.id === id)
         filteredlist = favoriteProducts.filter(fav=> fav.id !== foundedProduct.id)
         setFavoriteProducts(filteredlist) 
+        setFilterProducts(filteredlist)
         setData(filteredlist)
     }
     const handleSearchProduct = (search) => {
@@ -43,7 +44,7 @@ function Favorites(){
                     <Search products={favoriteProducts} handleSearchProduct={handleSearchProduct}/>
                 </div>
                 <div className="favorite_list">
-                    {filterProducts.map(product => <Product key={product.id} product={product} handleRemoveFavList={handleRemoveFavList}/>)}
+                    {filterProducts?.map(product => <Product key={product.id} product={product} handleRemoveFavList={handleRemoveFavList}/>)}
                 </div>
             </div>
 

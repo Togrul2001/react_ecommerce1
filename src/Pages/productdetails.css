@@ -1,0 +1,29 @@
+.product_details {
+    margin: 50px auto;
+    padding: 0;
+    display: flex;
+    border: 1px solid red;
+}
+
+.product_details_left_side {
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.product_details_left_side > .images > img{
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #e6e6e6;
+    
+}
+
+.product_details_right_side {
+    padding: 15px;
+}
+
+.product_details_right_side .product_name {
+    font-weight: 600;
+    font-size: x-large;
+}

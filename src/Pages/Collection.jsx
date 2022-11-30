@@ -25,11 +25,11 @@ function Collections({ handleRemoveFavList}){
                     </div>
                     <Search/>
                 </div>
-                <div className="favorite_list">
+                {/* <div className="favorite_list">
                     {favoriteProducts.map(favproductid => {
                         return products.map(product => product.id === favproductid ? <Product key={product.id} product={product} handleRemoveFavList={handleRemoveFavList}/> : '')
                     })}
-                </div>
+                </div> */}
             </div>
         </>
     )

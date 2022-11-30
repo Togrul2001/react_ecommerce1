@@ -9,6 +9,7 @@ export const PRODUCTS = [
       img: 'tshirt1.jfif',
       count: 100,
       sale: 80,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:243243,
@@ -18,6 +19,7 @@ export const PRODUCTS = [
       img: 'tshirt2.jfif',
       count: 80,
       sale: 30,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:678654,
@@ -27,6 +29,7 @@ export const PRODUCTS = [
       img: 'tshirt3.jpg',
       count: 67,
       sale: 21,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:243,
@@ -36,6 +39,7 @@ export const PRODUCTS = [
       img: 'tshirt4.png',
       count: 90,
       sale: 79,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:234,
@@ -45,6 +49,7 @@ export const PRODUCTS = [
       img: 'tshirt5.webp',
       count: 20,
       sale: 50,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:5324,
@@ -54,6 +59,7 @@ export const PRODUCTS = [
       img: 'tshirt6.jfif',
       count: 50,
       sale: 23,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:5230,
@@ -63,6 +69,7 @@ export const PRODUCTS = [
       img: 'tshirt8.jpg',
       count: 19,
       sale: 38,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:523,
@@ -72,6 +79,7 @@ export const PRODUCTS = [
       img: 'tshirt1.jfif',
       count: 87,
       sale: 11,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:45645,
@@ -81,6 +89,7 @@ export const PRODUCTS = [
       img: 'tshirt2.jfif',
       count: 100,
       sale: 14,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:2143,
@@ -90,6 +99,7 @@ export const PRODUCTS = [
       img: 'tshirt3.jpg',
       count: 34,
       sale: 68,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:756,
@@ -99,6 +109,7 @@ export const PRODUCTS = [
       img: 'tshirt4.png',
       count: 76,
       sale: 32,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:132,
@@ -108,6 +119,7 @@ export const PRODUCTS = [
       img: 'tshirt5.webp',
       count: 10,
       sale: 10,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:634,
@@ -117,6 +129,7 @@ export const PRODUCTS = [
       img: 'tshirt6.jfif',
       count: 18,
       sale: 49,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:2340,
@@ -126,6 +139,7 @@ export const PRODUCTS = [
       img: 'tshirt8.jpg',
       count: 55,
       sale: 2,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:645,
@@ -135,6 +149,7 @@ export const PRODUCTS = [
       img: 'tshirt1.jfif',
       count: 82,
       sale: 5,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:21342,
@@ -144,6 +159,7 @@ export const PRODUCTS = [
       img: 'tshirt2.jfif',
       count: 27,
       sale: 19,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:5243,
@@ -153,6 +169,7 @@ export const PRODUCTS = [
       img: 'tshirt3.jpg',
       count: 66,
       sale: 40,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
     {
       id:646,
@@ -162,5 +179,6 @@ export const PRODUCTS = [
       img: 'tshirt4.png',
       count: 70,
       sale: 23,
+      size: ['S', 'M', 'L', 'XL', '2XL']
     },
   ]

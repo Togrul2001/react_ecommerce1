@@ -3,17 +3,20 @@ import './bestsellers.css'
 import {AiFillStar} from 'react-icons/ai'
 import {GrFavorite} from 'react-icons/gr'
 import {MdFavorite} from 'react-icons/md'
-import { getData } from "../data";
+import { useNavigate } from "react-router-dom";
 
-
-function Product({handleRemoveFavList, favorites, product, handleAddFavList }) {
+function Product({handleRemoveFavList, favorites, isEnable, product, handleAddFavList }) {
+    const navigator = useNavigate()
+    const getToProductPage = () => {
+        navigator(`/products/${product.id}`)
+    }
     return(
-        <div key={product.id} className="best_seller_product">
+        <div key={product.id} className="best_seller_product" onClick={getToProductPage}>
             <div className="add_favorite_list">
-                {favorites ? favorites.find(fav=>fav.id === product.id) ? <MdFavorite onClick={() => handleAddFavList(product)} className="active_favorite"/> : <GrFavorite onClick={() => handleAddFavList(product)} className="deactive_favorite"/> : <MdFavorite onClick={() => handleRemoveFavList(product.id)} className="active_favorite"/>}
+                {favorites ? favorites.find(fav=>fav.id === product.id) ? <MdFavorite onClick={(e) => handleAddFavList(e,product)} className="active_favorite"/> : <GrFavorite onClick={(e) => handleAddFavList(e,product)} className="deactive_favorite"/> : <MdFavorite onClick={() => handleRemoveFavList(product.id)} className="active_favorite"/>}
             </div>
 
-            <a href="/">
+            {/* <Link to={require(`/product_details/${product.id}`)}> */}
             <div className="first_part">
                 <div className="product_image">
                 <img src={require(`../Assets/Images/${product.img}`)} alt="" />
@@ -30,7 +33,7 @@ function Product({handleRemoveFavList, favorites, product, handleAddFavList }) {
                 <AiFillStar className="star" />
                 </div>
             </div>
-            </a>
+            {/* </Link> */}
         </div>
     )
 }

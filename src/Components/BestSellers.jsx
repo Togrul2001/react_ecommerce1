@@ -4,9 +4,11 @@ import { getData, setData } from '../data'
 import Product from "./Product";
 
 
+
 function BestSellers({ products }) {
     const [favorites, setFavorites] = React.useState([])
-    const handleAddFavList = (product) => {
+    const handleAddFavList = (e, product) => {
+        e.stopPropagation() //hem productun hemde productun icindeki fav iconunun onclick funksiyasi var. bir birlerine qarismasin deye e.stoppropagation yaziriq ve fav iconuna klikleyende producta kliklenmis sayilmir
         console.log("product", product)
         let filteredData = []
         const foundedproduct = favorites?.find(fav => fav?.id === product.id)
@@ -26,6 +28,8 @@ function BestSellers({ products }) {
     React.useEffect(() => {
         setFavorites(getData() || [])
     }, [])
+
+
 
     return (
         <>
