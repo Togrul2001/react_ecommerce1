@@ -22,6 +22,7 @@ function Head(){
                     <div className="row">
                         <ul>
                             <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/products'>Məhsullar</Link></li>
                             <li><Link to='/basket'>Basket</Link></li>
                             <li><Link to='/favorites'>Favorites</Link></li>
                             <li><Link to='/about'>About</Link></li>

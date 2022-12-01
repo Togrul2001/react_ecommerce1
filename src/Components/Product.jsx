@@ -26,11 +26,11 @@ function Product({handleRemoveFavList, favorites, isEnable, product, handleAddFa
                 <div className="product_info">{product.name}</div>
                 <div className="product_price">{product.price}$</div>
                 <div className="rating">
-                <AiFillStar className="star" />
-                <AiFillStar className="star" />
-                <AiFillStar className="star" />
-                <AiFillStar className="star" />
-                <AiFillStar className="star" />
+                    <AiFillStar className="star" />
+                    <AiFillStar className="star" />
+                    <AiFillStar className="star" />
+                    <AiFillStar className="star" />
+                    <AiFillStar className="star" />
                 </div>
             </div>
             {/* </Link> */}
