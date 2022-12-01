@@ -15,6 +15,7 @@ export default function Pages() {
         { path: ':id', element: <ProductDetails />},
     ]},
     { path: 'collections', element: <Collections />},
+    { path: 'favorites', element: <Favorites />},
     { path: 'login', element: <Login />},
     { path: '*', element: <NotFound /> }
     ])

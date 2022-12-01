@@ -2,7 +2,6 @@ import React from 'react';
 import Product from '../Components/Product';
 import { getData, setData } from '../data';
 import Head from '../Layouts/Header/Head'
-import { PRODUCTS } from '../utilities/constants/products';
 import './favorite.css'
 import Search from '../Layouts/Header/Search';
 import { Link } from 'react-router-dom';

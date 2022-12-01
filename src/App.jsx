@@ -13,10 +13,9 @@ import ProductDetails from './Pages/ProductDetails';
 // In react-router-dom v6, "Switch" is replaced by routes "Routes"
 import Routes from './Routes'
 import {BrowserRouter as Router} from 'react-router-dom'
-
+import { Outlet, useLocation } from 'react-router-dom';
 
 function App() {
-  
   
   return (
     
@@ -35,7 +34,8 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path="*" element={<NotFound />} />
         </Routes> */}
-        <Footer/>
+        
+      <Footer/>
       </Router>
       
     </>
