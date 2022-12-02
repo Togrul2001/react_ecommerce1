@@ -34,6 +34,8 @@ function Products(){
         setFavorites(getData() || [])
     }, [])
 
+
+
 // Search
     const [filterProducts, setFilterProducts] = React.useState(productList) //search olunmuslar
     console.log("filtered", filterProducts)
@@ -42,6 +44,11 @@ function Products(){
         const filteredproducts = productList.filter(data => data.name.toLowerCase().includes(search.toLowerCase()))
         setFilterProducts(filteredproducts)
     }
+
+    const uniqueCategoryList = [...new Set(productList.map(product=>product.category))]
+    console.log("unique", uniqueCategoryList)
+
+
     return (
         <>
             <Head/>
@@ -62,6 +69,12 @@ function Products(){
                         </div>
                     </div>
                     <Search products={productList} handleSearchProduct={handleSearchProduct}/>
+                </div>
+                <div className="products_categories">
+                    <ul>
+                        <li>Hamisi</li>
+                        {uniqueCategoryList.map(category=> <li key={category}>{category}</li>)}
+                    </ul>
                 </div>
                 <div className="products_list">
                     {filterProducts?.map(product => <Product key={product.id} favorites={favorites} product={product} handleAddFavList={handleAddFavList}/>)}

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import axios from 'axios'
 import Footer from '../Layouts/Footer/Footer';
@@ -8,48 +8,93 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 
 
-function Login({ hideHeaderPaths = [] }){
-    const click = () => {
-        const input = document.getElementById('input')
-        console.log("input", input)
-    }
+// const countContext = createContext();
+
+// function Login() {
+//     const [count, setCount] = React.useState(10)
+//     return (
+//         <countContext.Provider value={{count,setCount}}>
+//             {count} <br />
+//             <CounterList/>
+//         </countContext.Provider>
+//     )
+
+// }
+
+// function CounterList(){
+//     return <Counter/>
+// }
+
+// function Counter(){
+//     return (
+//         <countContext.Consumer>{(value)=><>{value.count} <button onClick={()=>value.setCount(value.count+1)}>Click</button></>}</countContext.Consumer>
+//     )
+// }
+
+// function Login() {
+//     const [count, setCount] = React.useState(10)
+//     return (
+//        <>
+//        <p>{count}</p>  <br />
+//         <CounterList count={count} setCount={setCount}/>
+//        </>
+//     )
+
+// }
+
+// function CounterList({count,setCount}){
+//     return <Counter count={count} setCount={setCount}/>
+// }
+
+// function Counter({count,setCount}){
+//     return (
+//         <>
+//             <p>{count}</p>
+//             <button onClick={()=> setCount(count+1)}>Click</button>
+//         </>
+//     )
+// }
+
+const countContext = createContext()
+const nameContext = createContext()
 
 
-    React.useEffect(() => {
-        
-    })
 
-    // const [users, setUsers] = useState([])
-    // const [user, setUser] = useState({})
-    
-    // const getUsers = useCallback(async () => {
-    //     const { data } = await api.get(`/users`)
-    //     setUsers(data)
-    // }, [])
+function Login(){
+    const [count, setCount] = React.useState(5)
+    const [name, setName] = React.useState("Jhonas")
+    return(
+        <>
+        <nameContext.Provider value={{name,setName}}>
+            <countContext.Provider value={{count, setCount}}>
+                <CounterList/>
+            </countContext.Provider>
+        </nameContext.Provider>
 
-    // const getUser = useCallback(async () => {
-    //     const id = Math.floor(Math.random() * 10) + 1 
-    //     const { data } = await api.get(`/users/${id}`)
-    //     setUser(data)
-    // }, [])
+        </>
+    )
+}
 
-    // useEffect(() => {
-    //     getUsers(1)
-    // }, [getUsers])
-
-    // return(
-    //     // <>{JSON.stringify(users, null, 2)}</>
-    //     <>
-    //     <button className="btn btn-success" onClick={getUser}>get user</button>
-    //     {JSON.stringify(user, null, 2)} 
-    //     </>
-    // )
+function CounterList(){
     return (
         <>
-        <br /><br />
-            <input type="text" id='input'/>
-            <button onClick={click}>Click</button>
-            {new Array(20).fill(1).map(a => <br/>)}
+            <Counter/>
+        </>
+    )
+}
+
+function Counter(){
+    const value = useContext(countContext)
+    const namevalue = useContext(nameContext)
+    return (
+        <>
+            {value.count}
+            <button onClick={()=>value.setCount(value.count+1)}>Increase</button>
+
+            <br /><br />
+
+            {namevalue.name}
+            <button onClick={()=>namevalue.name==='Jhonas' ? namevalue.setName("Gavi") : namevalue.setName("Jhonas")}>Change Name</button>
         </>
     )
 }
