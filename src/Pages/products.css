@@ -57,9 +57,7 @@
 }
 
 .products_categories {
-    border-bottom: 1px solid #E6E6E6;    
-    border-top: 1px solid #E6E6E6; 
-    padding-top: 17px;
+    border-bottom: 1px solid #E6E6E6;
     margin-bottom: 15px;
 }
 
@@ -67,6 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 0;
 }
 
 .products_categories > ul > li {
@@ -76,4 +75,11 @@
     margin-right: 4px;
     border-radius: 5px;
     cursor: pointer;
+    transition: .4s;
+}
+
+.active_category {
+    background-color: #f26522;
+    border: 1px solid #f26522 !important;
+    color: #fff;
 }

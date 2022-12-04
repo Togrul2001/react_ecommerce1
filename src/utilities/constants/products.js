@@ -13,7 +13,7 @@ export const PRODUCTS = [
     },
     {
       id:243243,
-      price: 20,
+      price: 22,
       name: 'Tshirt-2',
       category: 'T-shirt',
       img: 'tshirt2.jfif',
@@ -23,7 +23,7 @@ export const PRODUCTS = [
     },
     {
       id:678654,
-      price: 20,
+      price: 18,
       name: 'Tshirt-3',
       category: 'Hoodie',
       img: 'tshirt3.jpg',
@@ -33,7 +33,7 @@ export const PRODUCTS = [
     },
     {
       id:243,
-      price: 20,
+      price: 25,
       name: 'Tshirt-4',
       category: 'Sweatshirt',
       img: 'tshirt4.png',
@@ -43,7 +43,7 @@ export const PRODUCTS = [
     },
     {
       id:234,
-      price: 20,
+      price: 33,
       name: 'Tshirt-5',
       category: 'Hoodie',
       img: 'tshirt5.webp',
@@ -53,7 +53,7 @@ export const PRODUCTS = [
     },
     {
       id:5324,
-      price: 20,
+      price: 19,
       name: 'Tshirt-6',
       category: 'Sweatshirt',
       img: 'tshirt6.jfif',
@@ -63,7 +63,7 @@ export const PRODUCTS = [
     },
     {
       id:5230,
-      price: 20,
+      price: 15,
       name: 'Tshirt-7',
       category: 'Hoodie',
       img: 'tshirt8.jpg',
@@ -73,7 +73,7 @@ export const PRODUCTS = [
     },
     {
       id:523,
-      price: 20,
+      price: 26,
       name: 'Tshirt-8',
       category: 'T-shirt',
       img: 'tshirt1.jfif',
@@ -83,7 +83,7 @@ export const PRODUCTS = [
     },
     {
       id:45645,
-      price: 20,
+      price: 22,
       name: 'Tshirt-9',
       category: 'T-shirt',
       img: 'tshirt2.jfif',
@@ -103,7 +103,7 @@ export const PRODUCTS = [
     },
     {
       id:756,
-      price: 20,
+      price: 18,
       name: 'Tshirt-11',
       category: 'Sweatshirt',
       img: 'tshirt4.png',
@@ -113,7 +113,7 @@ export const PRODUCTS = [
     },
     {
       id:132,
-      price: 20,
+      price: 30,
       name: 'Tshirt-12',
       category: 'Hoodie',
       img: 'tshirt5.webp',
@@ -123,7 +123,7 @@ export const PRODUCTS = [
     },
     {
       id:634,
-      price: 20,
+      price: 16,
       name: 'Tshirt-13',
       category: 'T-shirt',
       img: 'tshirt6.jfif',
@@ -133,7 +133,7 @@ export const PRODUCTS = [
     },
     {
       id:2340,
-      price: 20,
+      price: 23,
       name: 'Tshirt-14',
       category: 'Sweatshirt',
       img: 'tshirt8.jpg',
@@ -143,7 +143,7 @@ export const PRODUCTS = [
     },
     {
       id:645,
-      price: 20,
+      price: 17,
       name: 'Tshirt-15',
       category: 'T-shirt',
       img: 'tshirt1.jfif',
@@ -153,7 +153,7 @@ export const PRODUCTS = [
     },
     {
       id:21342,
-      price: 20,
+      price: 24,
       name: 'Tshirt-16',
       category: 'T-shirt',
       img: 'tshirt2.jfif',
@@ -163,7 +163,7 @@ export const PRODUCTS = [
     },
     {
       id:5243,
-      price: 20,
+      price: 26,
       name: 'Tshirt-17',
       category: 'Hoodie',
       img: 'tshirt3.jpg',
@@ -173,7 +173,7 @@ export const PRODUCTS = [
     },
     {
       id:646,
-      price: 20,
+      price: 21,
       name: 'Tshirt-18',
       category: 'Hoodie',
       img: 'tshirt4.png',
