@@ -24,7 +24,7 @@ export const PRODUCTS = [
     {
       id:678654,
       price: 18,
-      name: 'Tshirt-3',
+      name: 'Hoodie-3',
       category: 'Hoodie',
       img: 'tshirt3.jpg',
       count: 67,
@@ -34,7 +34,7 @@ export const PRODUCTS = [
     {
       id:243,
       price: 25,
-      name: 'Tshirt-4',
+      name: 'Sweatshirt-4',
       category: 'Sweatshirt',
       img: 'tshirt4.png',
       count: 90,
@@ -44,7 +44,7 @@ export const PRODUCTS = [
     {
       id:234,
       price: 33,
-      name: 'Tshirt-5',
+      name: 'Hoodie-5',
       category: 'Hoodie',
       img: 'tshirt5.webp',
       count: 20,
@@ -54,7 +54,7 @@ export const PRODUCTS = [
     {
       id:5324,
       price: 19,
-      name: 'Tshirt-6',
+      name: 'Sweatshirt-6',
       category: 'Sweatshirt',
       img: 'tshirt6.jfif',
       count: 50,

@@ -10,6 +10,9 @@ import Form from 'react-bootstrap/Form';
 
 function Products(){
     const productList = PRODUCTS
+    const [sortBy, setSortBy] = React.useState('')
+    const [category, setCategory] = React.useState('')
+    const [filterProducts, setFilterProducts] = React.useState(productList) //umumi filter olunmuslar
 // Add, remove Favorite List
 
     const [favorites, setFavorites] = React.useState([])
@@ -29,6 +32,12 @@ function Products(){
         
     }
 
+    const getSortedProducts = React.useMemo(() => {
+        if (category==="All") {
+            return filterProducts
+        }
+        return filterProducts.filter(item => item.category.includes(category))
+    }, [category, filterProducts])
 
 
     React.useEffect(() => {
@@ -36,9 +45,23 @@ function Products(){
     }, [])
 
 
+    React.useEffect(() => {
+        
+        setFilterProducts(sortBy ? [].concat(filterProducts).sort((a, b) => {
+            switch(sortBy) {
+                case 'high_to_low':
+                    return b.price - a.price;
+                case 'low_to_high':
+                    return a.price - b.price
+                default:
+                    return productList
+            }
+        }) : productList)
+    }, [sortBy, productList]);
+
+
 
 // Search
-    const [filterProducts, setFilterProducts] = React.useState(productList) //search olunmuslar
     const handleSearchProduct = (search) => {
         const filteredproducts = productList.filter(data => data.name.toLowerCase().includes(search.toLowerCase()))
         setFilterProducts(filteredproducts)
@@ -51,39 +74,20 @@ function Products(){
     const [activeCategory, setActiveCategory] = React.useState("All")
     const filteredCategory = (category) => {
         setActiveCategory(category)
-        const filteredProducts = productList.filter(product=>product.category===category)
-        setFilterProducts(filteredProducts)
+        setCategory(category)
+        // const filteredProducts = productList.filter(product=>product.category===category)
+        // setFilterProducts(filteredProducts)
         if (category==="All") {
-            setFilterProducts(productList)
+            setCategory("All")
         }
     }
 
 // Sort
-    console.log("sort",filterProducts.sort())
 
     const sortProducts = (event) => {
         const value = event.target.value
-        if (value==='mix') {
-            filterProducts.reverse()
-        }
-        else if(value==='high_to_low'){
-            function compareObjects(object1, object2, key) {
-                const obj1 = object1[key]
-                const obj2 = object2[key]
-              
-                if (obj1 < obj2) {
-                  return -1
-                }
-                if (obj1 > obj2) {
-                  return 1
-                }
-                return 0
-              }
-              
-              filterProducts.sort((product1, product2) => {
-                return compareObjects(product1, product2, 'price')
-              })
-        }
+        console.log("value", value)
+        setSortBy(value)
     }
     return (
         <>
@@ -96,9 +100,9 @@ function Products(){
                             <span>Filtr</span>
                         </div>
                         <div className="sort">
-                            <Form.Select onChange={sortProducts} aria-label="Default select example">
+                            <Form.Select onClick={sortProducts} defaultValue="all" aria-label="Default select example">
                                 <option disabled selected hidden value="">Sırala</option>
-                                <option value="mix">Qarışıq</option>
+                                <option value="all">Qarışıq</option>
                                 <option value="high_to_low">Bahadan ucuza</option>
                                 <option value="low_to_high">Ucuzdan bahaya</option>
                             </Form.Select>
@@ -113,7 +117,7 @@ function Products(){
                     </ul>
                 </div>
                 <div className="products_list">
-                    {filterProducts?.map(product => <Product key={product.id} favorites={favorites} product={product} handleAddFavList={handleAddFavList}/>)}
+                    {getSortedProducts?.map(product => <Product key={product.id} favorites={favorites} product={product} handleAddFavList={handleAddFavList}/>)}
                 </div>
             </div>
         </>
