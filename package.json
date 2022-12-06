@@ -31,7 +31,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server:dev": "json-server-auth db.json -p 5000"
+    "jsonserver": "json-server-auth db.json -p 5000"
   },
   "eslintConfig": {
     "extends": [

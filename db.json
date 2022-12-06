@@ -14,6 +14,13 @@
       "email": "mammadov17878515@gmail.com",
       "password": "$2a$10$LHday4LQ7NkpCeS2QH11me0d7R4/S7ZBsOmFK3pboNH12vJYYThGG",
       "id": 1
+    },
+    {
+      "email": "mammadov@gmail.com",
+      "password": "$2a$10$aFBlai2kCt8JlQctvCjsGeBvsEQY6xXeLE9KHxyC9G7JonDarTwuu",
+      "name": "mammadov",
+      "age": "22",
+      "id": 2
     }
   ]
 }

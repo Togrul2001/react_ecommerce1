@@ -1,4 +1,4 @@
-.login_page {
+.register_page {
     background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
     background-position: center;
     background-size: cover;
@@ -7,56 +7,58 @@
     position:absolute;
 }
 
-.login_page form{
+.register_page form{
     border-radius: 7px;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     width: 400px;
-    height: 450px;
+    height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    row-gap: 50px;
+    row-gap: 30px;
     background-color: #fff;
 }
 
 
-.login_page form > p{
+.register_page form > p{
     font-size: 40px;
 }
 
-.login_page .email_div {
+.register_page .email_div,
+.register_page .lastname_div,
+.register_page .firstname_div {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
-.login_page .password_div {
+.register_page .password_div {
     display: flex;
     flex-direction: column;
 }
 
-.login_page form label{
+.register_page form label{
     margin-bottom: 10px;
 }
 
-.login_page form input{
+.register_page form input{
     outline: none;
     padding: 5px;
     border-radius: 5px;
-    height: 45px;
+    height: 35px;
     width: 270px;
     border: 1px solid grey;
 }
 
-.login_page form > div{
+.register_page form > div{
     padding-bottom: 20px;
 }
 
-.login_page form button {
+.register_page form button {
     width: 250px;
     height: 45px;
     outline: none;

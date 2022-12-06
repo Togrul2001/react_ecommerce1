@@ -6,6 +6,7 @@ import Login from './Pages/Login'
 import NotFound from './Pages/NotFound'
 import ProductDetails from './Pages/ProductDetails'
 import Products from './Pages/Products'
+import Register from './Pages/Register'
 
 export default function Pages() {
     const pages = useRoutes([
@@ -17,6 +18,7 @@ export default function Pages() {
     { path: 'collections', element: <Collections />},
     { path: 'favorites', element: <Favorites />},
     { path: 'login', element: <Login />},
+    { path: 'register', element: <Register />},
     { path: '*', element: <NotFound /> }
     ])
     

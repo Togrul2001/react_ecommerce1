@@ -4,6 +4,8 @@ import axios from 'axios'
 import Footer from '../Layouts/Footer/Footer';
 import { Outlet, useLocation } from 'react-router-dom';
 import './login.css'
+import { useNavigate } from 'react-router-dom/dist';
+
 
 // const api = axios.create({ baseURL: 'https://jsonplaceholder.typicode.com/'})
 
@@ -22,21 +24,51 @@ function Login(){
     //   getUsers()
     // }, [])
 
-    const [loginForm, setLoginForm] = React.useState({
-        email:'',
-        password:''
-    })
+    // const [loginForm, setLoginForm] = React.useState({
+    //     email:'',
+    //     password:''
+    // })
+
+    const [email, setEmail] = React.useState('')
+    const [password, setPassword] = React.useState('')
     const handleSubmit = (e) => {
-        console.log("e", e)
         e.preventDefault()
+
+        const login = async () => {
+            let headersList = {
+                "Accept": "*/*",
+                "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+                "Content-Type": "application/json" 
+               }
+               
+               let bodyContent = JSON.stringify({email,password});
+               
+               let reqOptions = {
+                 url: "http://localhost:5000/login",
+                 method: "POST",
+                 headers: headersList,
+                 data: bodyContent,
+               }
+               
+               let response = await axios.request(reqOptions);
+               console.log("response",response.data);
+        }
+        login()
     }
-    const handleLogin = (e)=> {
-        const {name,value} = e.target
-        const data = {[name]:value}
-        setLoginForm(data)
+    const handleLoginEmail = (e)=> {
+        // const {name,value} = e.target
+        // const data = {[name]:value}
+        // setLoginForm(data)
+        setEmail(e.target.value)
+        console.log("email", email)
         
     }
-    console.log("loginform", loginForm)
+
+    const handleLoginPassword = (e)=> {
+        setPassword(e.target.value)
+        console.log("password", password)
+    }
+
 
     return(
     <>
@@ -44,13 +76,13 @@ function Login(){
             <form action="" onSubmit={e=>handleSubmit(e)}>
                 <p>Login</p>
                 <div>
-                    <div className="username_div">
+                    <div className="email_div">
                         <label htmlFor="email">Email</label>
-                        <input type="text" className="" name="email" placeholder="" onChange={(e)=>handleLogin(e)}/>
+                        <input type="text" className="" name="email" placeholder="" onChange={(e)=>handleLoginEmail(e)}/>
                     </div>
                     <div className="password_div">
                         <label htmlFor="password">Password</label>
-                        <input type="password" className="" name="password" placeholder="" onChange={(e)=>handleLogin(e)}/>
+                        <input type="password" className="" name="password" placeholder="" onChange={(e)=>handleLoginPassword(e)}/>
                     </div>
                 </div>
 
