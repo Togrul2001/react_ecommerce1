@@ -23,26 +23,38 @@ function Login(){
     // }, [])
 
     const [loginForm, setLoginForm] = React.useState({
-        email: '',
-        password: '',
+        email:'',
+        password:''
     })
+    const handleSubmit = (e) => {
+        console.log("e", e)
+        e.preventDefault()
+    }
+    const handleLogin = (e)=> {
+        const {name,value} = e.target
+        const data = {[name]:value}
+        setLoginForm(data)
+        
+    }
+    console.log("loginform", loginForm)
+
     return(
     <>
         <div className="login_page">
-            <form action="">
+            <form action="" onSubmit={e=>handleSubmit(e)}>
                 <p>Login</p>
                 <div>
                     <div className="username_div">
                         <label htmlFor="email">Email</label>
-                        <input type="text" className="" name="email" placeholder=""/>
+                        <input type="text" className="" name="email" placeholder="" onChange={(e)=>handleLogin(e)}/>
                     </div>
                     <div className="password_div">
                         <label htmlFor="password">Password</label>
-                        <input type="text" className="" name="password" placeholder=""/>
+                        <input type="password" className="" name="password" placeholder="" onChange={(e)=>handleLogin(e)}/>
                     </div>
                 </div>
 
-                <button className="">Login</button>
+                <button className="" type="submit">Login</button>
 
             </form>
         </div>
