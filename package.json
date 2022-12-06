@@ -9,7 +9,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@trendyol-js/react-carousel": "^3.0.0",
-    "axios": "^1.2.0",
+    "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
     "country-flag-icons": "^1.5.5",
     "react": "^18.2.0",
@@ -30,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server:dev": "json-server-auth db.json -p 5000"
   },
   "eslintConfig": {
     "extends": [
@@ -49,5 +50,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "json-server": "^0.17.1",
+    "json-server-auth": "^2.1.0"
   }
 }
