@@ -2,56 +2,61 @@ import React, { createContext, useCallback, useContext, useEffect, useState } fr
 import Carousel from 'react-bootstrap/Carousel';
 import axios from 'axios'
 import Footer from '../Layouts/Footer/Footer';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './login.css'
-import { useNavigate } from 'react-router-dom/dist';
+import { setToken } from '../data';
+
 
 
 // const api = axios.create({ baseURL: 'https://jsonplaceholder.typicode.com/'})
 
 
-
 function Login(){
-    // const [users, setUsers] = React.useState([])
-    // const getUsers = async () => {
-    //   await axios.get("http://localhost:3001/users")
-    //   .then(res=> {
-    //     setUsers(res.data)
-    //   })
-    // }
-  
-    // React.useEffect(() => {
-    //   getUsers()
-    // }, [])
 
     // const [loginForm, setLoginForm] = React.useState({
     //     email:'',
     //     password:''
     // })
-
+    const navigation = useNavigate()
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
     const handleSubmit = (e) => {
         e.preventDefault()
 
         const login = async () => {
-            let headersList = {
-                "Accept": "*/*",
-                "User-Agent": "Thunder Client (https://www.thunderclient.com)",
-                "Content-Type": "application/json" 
-               }
-               
-               let bodyContent = JSON.stringify({email,password});
-               
-               let reqOptions = {
-                 url: "http://localhost:5000/login",
-                 method: "POST",
-                 headers: headersList,
-                 data: bodyContent,
-               }
-               
-               let response = await axios.request(reqOptions);
-               console.log("response",response.data);
+            try {
+                let headersList = {
+                    "Accept": "*/*",
+                    "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+                    "Content-Type": "application/json" 
+                   }
+                   
+                   let bodyContent = JSON.stringify({email,password});
+                   
+                   let reqOptions = {
+                     url: "http://localhost:5000/login",
+                     method: "POST",
+                     headers: headersList,
+                     data: bodyContent,
+                   }
+                   
+                   let response = await axios.request(reqOptions)
+                   setToken(response.data.accessToken)
+                   navigation('/')
+                   
+                   console.log("response", response.data)
+                   
+            } catch (error) {
+                try {
+                    throw new Error("Istifadeci adi veya parol sehfdir")
+                } catch (error) {
+                    toast.error(`${error.message}`)
+                    console.log("Error", error.message)
+                }
+            }
+            
         }
         login()
     }
@@ -72,6 +77,7 @@ function Login(){
 
     return(
     <>
+
         <div className="login_page">
             <form action="" onSubmit={e=>handleSubmit(e)}>
                 <p>Login</p>
@@ -90,6 +96,7 @@ function Login(){
 
             </form>
         </div>
+        <ToastContainer />
     </>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Search from '../Layouts/Header/Search';
 import '../Layouts/Header/head.css'
 import Head from '../Layouts/Header/Head';
@@ -6,18 +6,13 @@ import IndividualIntervalsExample from '../Components/Carousel';
 import './home.css'
 import BestSellers from '../Components/BestSellers';
 import { PRODUCTS } from '../utilities/constants/products';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { getToken } from '../data';
+import UserContext from '../contexts/user-context';
 
 function Home(){
     const [products, setProducts] = React.useState(PRODUCTS)
-    // React.useEffect(()=>{
-    //     fetch( `http://www.omdbapi.com/?t=a&apikey=3ee7236`).then(res=>{
-    //         return res.json()
-    //     }).then(res=>{
-    //         console.log(res)
-    //         setProducts(res)
-    //     })
-    // },[])
-
     return(
         <>
             <div className="home_main_section">
@@ -43,6 +38,7 @@ function Home(){
                 <h1>Best Sellers</h1>
                 <BestSellers products={products}/>
             </div>
+
         </>
         
     )

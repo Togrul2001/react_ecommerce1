@@ -23,7 +23,10 @@
     "react-router-dom": "^6.4.3",
     "react-scripts": "^5.0.1",
     "react-slick": "^0.29.0",
+    "react-toastify": "^9.1.1",
     "react-uuid": "^2.0.0",
+    "reactjs-alert": "^2.2.0",
+    "sweetalert2": "^11.6.15",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
